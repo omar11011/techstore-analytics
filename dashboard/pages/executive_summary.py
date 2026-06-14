@@ -27,7 +27,7 @@ def _apply_filters_to_orders(orders: pd.DataFrame, filters: dict | None) -> pd.D
 
     filtered = orders.copy()
 
-    ifw "order_date" in filtered.columns:
+    if "order_date" in filtered.columns:
         filtered["order_date"] = pd.to_datetime(filtered["order_date"], errors="coerce", utc=True)
         filtered = filtered.dropna(subset=["order_date"])
         if filters.get("date_range"):
