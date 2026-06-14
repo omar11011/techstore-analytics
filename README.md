@@ -736,25 +736,6 @@ El host `postgres` en Docker Compose se refiere al servicio de PostgreSQL dentro
 
 ---
 
-## Capturas Sugeridas
-
-Para el portafolio, se recomienda capturar las siguientes secciones del dashboard:
-
-| # | Seccion | Que muestra |
-|---|---|---|
-| 1 | **Resumen Ejecutivo** | KPIs principales con tarjetas estilizadas, graficos de tendencia y distribucion |
-| 2 | **Ventas - Grafico Mensual** | Evolucion de ventas con grafico de lineas interactivo (Plotly) |
-| 3 | **Ventas - Top Productos** | Grafico de barras horizontales con los productos mas vendidos |
-| 4 | **Clientes - Top Clientes** | Tabla y grafico de los clientes con mayor gasto |
-| 5 | **Productos - Rentabilidad** | Analisis de margen de ganancia por producto y categoria |
-| 6 | **Inventario - Estado** | Grafico de pie con distribucion de stock |
-| 7 | **SQL Showcase - Consulta Avanzada** | Codigo SQL con sintaxis destacada y tabla de resultados |
-| 8 | **Swagger UI** | Documentacion automatica de la API con todos los endpoints |
-| 9 | **Sidebar con Filtros** | Filtros de fecha, categoria y sucursal en el sidebar |
-| 10 | **Banner de Modo Demo** | El banner que indica el modo CSV y la transicion automatica |
-
----
-
 ## Aprendizajes Demostrados
 
 ### Base de Datos y SQL
@@ -798,31 +779,3 @@ Para el portafolio, se recomienda capturar las siguientes secciones del dashboar
 - Convenciones - PEP 8, nombres descriptivos, organizacion consistente
 
 ---
-
-## Licencia
-
-Este proyecto esta bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para mas detalles.
-
-```
-MIT License
-
-Copyright (c) 2026 omar11011
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
