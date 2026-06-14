@@ -1,0 +1,11 @@
+store_name,city,total_sales,num_orders
+TechStore Guadalajara,Guadalajara,3359248.09,994
+TechStore Madrid,Madrid,3161891.85,1018
+TechStore Monterrey,Monterrey,3161646.58,984
+TechStore Santiago,Santiago,3039129.44,951
+TechStore Buenos Aires,Buenos Aires,3022477.16,965
+TechStore São Paulo,São Paulo,3020441.76,959
+TechStore Lima,Lima,2973888.29,953
+TechStore CDMX Centro,Ciudad de México,2946255.8,928
+TechStore Miami,Miami,2882216.74,937
+TechStore Bogotá,Bogotá,2854858.7,909

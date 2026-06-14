@@ -136,6 +136,5 @@ dmypy.json
 cython_debug/
 
 # Project-specific
-data/demo/*.csv
 .streamlit/secrets.toml
 *.pyc

@@ -53,6 +53,14 @@ class DataLoader:
     def _init_connection(self) -> None:
         """Try PostgreSQL; silently fall back to CSV on any error."""
         try:
+            from sqlalchemy import create_engine, text
+        except ImportError:
+            logger.info("SQLAlchemy not installed — CSV demo mode.")
+            self._engine = None
+            self._demo_mode = True
+            return
+
+        try:
             database_url: Optional[str] = None
 
             # 1. st.secrets
