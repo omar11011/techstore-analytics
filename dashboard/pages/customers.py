@@ -35,12 +35,15 @@ def render(loader: DataLoader, filters: dict | None = None) -> None:
     # Apply date range filter to orders
     # ------------------------------------------------------------------
     if not orders.empty and "order_date" in orders.columns:
-        orders["order_date"] = pd.to_datetime(orders["order_date"], errors="coerce")
+        orders["order_date"] = pd.to_datetime(orders["order_date"], errors="coerce", utc=True)
+        orders = orders.dropna(subset=["order_date"])
         if filters and filters.get("date_range"):
             dr = filters["date_range"]
+            start = pd.to_datetime(dr[0], utc=True)
+            end = pd.to_datetime(dr[1], utc=True)
             orders = orders[
-                (orders["order_date"] >= pd.to_datetime(dr[0]))
-                & (orders["order_date"] <= pd.to_datetime(dr[1]))
+                (orders["order_date"] >= start)
+                & (orders["order_date"] <= end)
             ]
 
     # ------------------------------------------------------------------

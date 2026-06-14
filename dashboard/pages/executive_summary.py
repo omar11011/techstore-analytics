@@ -27,13 +27,16 @@ def _apply_filters_to_orders(orders: pd.DataFrame, filters: dict | None) -> pd.D
 
     filtered = orders.copy()
 
-    if "order_date" in filtered.columns:
-        filtered["order_date"] = pd.to_datetime(filtered["order_date"], errors="coerce")
+    ifw "order_date" in filtered.columns:
+        filtered["order_date"] = pd.to_datetime(filtered["order_date"], errors="coerce", utc=True)
+        filtered = filtered.dropna(subset=["order_date"])
         if filters.get("date_range"):
             dr = filters["date_range"]
+            start = pd.to_datetime(dr[0], utc=True)
+            end = pd.to_datetime(dr[1], utc=True)
             filtered = filtered[
-                (filtered["order_date"] >= pd.to_datetime(dr[0]))
-                & (filtered["order_date"] <= pd.to_datetime(dr[1]))
+                (filtered["order_date"] >= start)
+                & (filtered["order_date"] <= end)
             ]
 
     if filters.get("store") and "store_id" in filtered.columns:
