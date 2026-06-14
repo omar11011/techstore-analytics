@@ -1,0 +1,1 @@
+"""TechStore Analytics application package."""
